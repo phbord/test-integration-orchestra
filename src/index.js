@@ -13,12 +13,10 @@ root.render(
   <React.StrictMode>
     <Router>
       <Header/>
-      <div className='container'>
-        <Routes>
-          <Route path='/' element={<Home/>} exact/>
-        </Routes>
-        <Footer/>
-      </div>
+      <Routes>
+        <Route path='/' element={<Home/>} exact/>
+      </Routes>
+      <Footer/>
     </Router>
   </React.StrictMode>
 );

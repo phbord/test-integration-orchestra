@@ -1,0 +1,293 @@
+.slideshow,.offers,.guide {
+  h1 {
+    margin: 0 0 2rem;
+    color: $dark;
+    font-family: $title-font;
+    font-size: 2.4rem;
+  }
+}
+
+.slideshow {
+  position: relative;
+  height: $slideshow-mobile;
+  min-height: $slideshow-mobile;
+  background: $dark url(../../images/clouds_forest_lake.jpeg) center no-repeat;
+  background-size: cover;
+
+  .btn-circle-arrow {
+    display: none;
+    position: absolute;
+    top: calc(50% - $input-height/2);
+
+    &:nth-child(1) {
+      left: 5rem;
+    }
+
+    &:nth-child(2) {
+      right: 5rem;
+    }
+  }
+}
+
+.slideshow__list {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  overflow: hidden;
+
+  li {
+    width: 100vw;
+    min-width: 100vw;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  img {
+    height: 100%;
+    display: none;
+  }
+
+  h1 {
+    margin-bottom: .5rem;
+    color: $orange;
+  }
+
+  p {
+    margin: 0 0 .7rem;
+    color: $light;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.slideshow__nav {
+  display: flex;
+  justify-content: center;
+}
+
+.offers {
+  padding: 2.8rem 0;
+  display: flex;
+  justify-content: center;
+  background-color: $light-pink;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+}
+
+.offers__list {
+  margin-right: -$offersListMarginX;
+  margin-left: -$offersListMarginX;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  li {
+    padding-right: $offersListMarginX;
+    padding-left: $offersListMarginX;
+    flex-basis: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+}
+
+.offer {
+  margin: 1rem 0;
+  background-color: $light;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    overflow: hidden;
+  }
+}
+
+.offer__body {
+  padding: 1.9rem;
+
+  h2 {
+    margin: 0 0 .5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  h3 {
+    margin: 0 0 .5rem;
+    color: $orange;
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+
+  p {
+    height: 5rem;
+    margin: 0 0 1.9rem;
+    color: $light-blue;
+    font-size: 1.4rem;
+    overflow: hidden;
+  }
+}
+
+.offer__body__details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.offer__body__details__price {
+  margin: -.25rem 0;
+  display: flex;
+  align-items: flex-end;
+
+  strong {
+    margin-right: .5rem;
+    color: $orange;
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+
+  span {
+    margin-bottom: 0.25rem;
+    font-size: 1.2rem;
+  }
+}
+
+.offer__body__details__time {
+  color: $light-blue;
+  font-size: 1.2rem;
+}
+
+.guide {
+  padding: 4.1rem 0;
+  display: flex;
+  justify-content: center;
+
+  p {
+    margin: 0 0 $footer-item-padding-y;
+    font-size: 1.4rem;
+    text-align: justify;
+    line-height: 1.4;
+  }
+}
+
+.guide__body {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: $media-size) {
+  .slideshow,.offers,.guide {
+    h1 {
+      margin-bottom: 4.8rem;
+      font-size: 3.8rem;
+    }
+  }
+
+  .slideshow {
+    height: $slideshow-desktop;
+    min-height: $slideshow-desktop;
+
+    .btn-circle-arrow {
+      display: block;
+    }
+
+    .circle-nav {
+      display: none;
+    }
+  }
+
+  .slideshow__list {
+    li {
+      justify-content: center;
+    }
+
+    h1 {
+      margin-bottom: .5rem;
+    }
+
+    p {
+      margin: 0 0 1.5rem;
+    }
+  }
+
+  .offers {
+    padding: 8.5rem 0;
+
+    h1 {
+      margin-bottom: 2.8rem;
+    }
+  }
+
+  .offer {
+    height: $offerImgHeight;
+    margin: 2rem 0;
+    display: block;
+
+    img {
+      height: 100%;
+      width: auto;
+      border-radius: 1.5rem;
+      float: left;
+    }
+  }
+
+  .offer__body {
+    height: calc(100% - (1.9rem*2));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2 {
+      height: 2.069rem;
+      overflow: hidden;
+    }
+
+    h3 {
+      height: 1.38rem;
+      overflow: hidden;
+    }
+  }
+
+  .guide {
+    p {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media (min-width: 1250px) {
+  .offers__list {
+    li {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+  }
+}

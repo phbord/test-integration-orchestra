@@ -1,0 +1,13 @@
+input {
+  height: $input-height;
+  padding: 0 2.2rem;
+  border: 0;
+  border-radius: calc($input-height/2);
+  font-size: 1.4rem;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}

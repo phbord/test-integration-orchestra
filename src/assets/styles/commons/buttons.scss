@@ -1,0 +1,61 @@
+button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a,button {
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.btn-menu {
+  height: $burger-line-height;
+  padding: 0;
+  border-bottom: $gray solid 1px;
+  display: flex;
+  align-items: center;
+
+  &,&::after {
+    width: $burger-line-width;
+    border-top: $gray solid 1px;
+  }
+  &::after {
+    content: '';
+  }
+}
+
+.btn-circle-arrow {
+  width: $input-height;
+  height: $input-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: $light;
+
+  img {
+    width: 1.6rem;
+  }
+}
+
+.btn-custom {
+  height: 4.2rem;
+  font-size: 1.4rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+  }
+}
